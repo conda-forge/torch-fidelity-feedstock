@@ -1,5 +1,5 @@
 {% set name = "torch-fidelity" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,15 +7,15 @@ package:
 
 source:
   url: https://github.com/toshas/torch-fidelity/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 8729554a16e142ca2d360f495450ca7fe9c1511d3bf11fe2de8a9616877b165c
+  sha256: 62b55650678253499547589381cbe11d8711dc7efca295f74074de1cb28d7715
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
   entry_points:
     - fidelity = torch_fidelity.fidelity:main
-  
+
 
 requirements:
   host:
